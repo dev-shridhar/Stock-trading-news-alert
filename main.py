@@ -1,8 +1,8 @@
 import requests
 from twilio.rest import Client
 
-twilio_acc = "AC8f48b3b649744e675c64056d82c73353"
-auth_token = "4822d8673e4bcdd31a8590c6699ff0ae"
+twilio_acc = "your account sid"
+auth_token = "your auth token"
 
 
 STOCK_NAME = "TSLA"
@@ -11,8 +11,8 @@ COMPANY_NAME = "Tesla inc."
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 STOCK_ENDPOINT= "https://www.alphavantage.co/query?"
 
-STOCK_API = "47OJ3NYCIZ71H5AE"
-NEWS_API = "242f0656529e4d338cb85754967e5f1b"
+STOCK_API = "ypur stock api"
+NEWS_API = "your news api"
 params ={
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK_NAME,
@@ -58,6 +58,6 @@ if abs(diff_perc) > 1:
     for article in formatted_articles:
         message = client.messages.create(
             body=article,
-            from_="+13156583879",
-            to= "+917378473761"
+            from_="twilio number",
+            to= "your number"
         )
